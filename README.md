@@ -109,7 +109,7 @@
 ![T.S.P Main Translation](project2/홈페이지.png)
 
 * **마이페이지**
-![T.S.P MyPage](project2/마이페이지_.png)
+![T.S.P MyPage](project2/마이페이지.png)
 
 * **네비게이션 바 (로그인/로그아웃 상태)**
 ![T.S.P UserNav Component](project2/네비게이션.png)
