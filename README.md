@@ -148,7 +148,7 @@
 * **시뮬레이터 메인 화면**
 ![AI Project Simulator Main](project3/프로젝트3홈페이지.png)
 * **지도 뷰어 (위성 등)**
-![AI Project Map View](project3/구글_지도api지도위성사진.png)
+![AI Project Map View](project3/구글지도api지도위성사진.png)
 
 ##### 3. AI 모델 통합 및 데이터 관리 (Multi-Layer Communication)
 * **구현 상세:** **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**의 다층 통신 아키텍처를 구현했습니다. Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot를 거쳐 MariaDB에 저장된 후, 최종적으로 React에 응답하여 화면을 업데이트하는 구조입니다.
