@@ -63,10 +63,10 @@
 ![WebShopping Usecase](images/1usecase.png)
 
 * **홈페이지 및 상품 목록 스크린샷**
-![WebShopping Homepage](project1/홈페이지및상품목록.png)
+![WebShopping Homepage](project1/홈페이지.png)
 
 * **상품 관리 (이미지 업로드/등록) 스크린샷**
-![상품 관리 및 등록 화면](project1/상품관리및등록.png)
+![상품 관리 및 등록 화면](project1/상품등록.png)
 
 #### 주요 구현 기능 및 코드 설명
 1.  **이미지 업로드 및 관리:**
