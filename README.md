@@ -139,16 +139,16 @@
 ##### 1. 안전한 사용자 인증 시스템 (Spring Security / JWT)
 * **구현 상세:** Spring Boot와 Spring Security 기반의 RESTful API에 대한 **안전한 인증 시스템** 구축. **상태 비저장(Stateless) 세션 관리 모델**을 채택하여 확장성을 확보했으며, **JSON Web Token (JWT)**을 사용하여 사용자의 인증 상태를 안전하게 관리합니다.
 * **로그인 화면**
-![AI Project Login Screen](project3/로그인_화면.png)
+![AI Project Login Screen](project3/로그인화면.png)
 * **회원가입 화면**
-![AI Project Register Screen](project3/회원가입_화면.png)
+![AI Project Register Screen](project3/회원가입화면.png)
 
 ##### 2. 지도 기반 시뮬레이터 구현 (Google Maps API / React)
 * **구현 상세:** 백엔드 API를 통해 Google Maps API 키를 안전하게 가져와 지도를 동적으로 초기화합니다. 지도 클릭 시 마커를 표시하고, 해당 위치의 지표를 쿼리 패널에 반영하여 사용자 요청에 따른 데이터 시각화를 제공합니다.
 * **시뮬레이터 메인 화면**
-![AI Project Simulator Main](project3/프로젝트_3_홈페이지.png)
+![AI Project Simulator Main](project3/프로젝트3홈페이지.png)
 * **지도 뷰어 (위성 등)**
-![AI Project Map View](project3/구글_지도_api_지도위성사진.png)
+![AI Project Map View](project3/구글_지도api지도위성사진.png)
 
 ##### 3. AI 모델 통합 및 데이터 관리 (Multi-Layer Communication)
 * **구현 상세:** **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**의 다층 통신 아키텍처를 구현했습니다. Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot를 거쳐 MariaDB에 저장된 후, 최종적으로 React에 응답하여 화면을 업데이트하는 구조입니다.
