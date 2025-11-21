@@ -109,13 +109,14 @@
     </table>
 </div>
 
-#### 🖥️ 주요 화면 및 인증 시스템
-| 메인 번역 화면 | 마이페이지 / 네비게이션 |
-| :---: | :---: |
-| ![T.S.P Main Translation](images/2_screenshot_main.png) | ![T.S.P MyPage](images/2_screenshot_mypage.png) |
+#### 🖥️ 주요 화면 및 컴포넌트 (4분할 구조)
+
+| 메인 번역 화면 | 마이페이지 | 네비게이션 바 (로그인/로그아웃 상태) | 상세 번역 결과 |
+| :---: | :---: | :---: | :---: |
+| ![T.S.P Main Translation](images/2_screenshot_main.png) | ![T.S.P MyPage](images/2_screenshot_mypage.png) | ![T.S.P UserNav Component](images/2_screenshot_usernav.png) | ![T.S.P Detailed Result](images/2_screenshot_detail.png) |
 
 * **프론트엔드 (React):** 기술 스택: React, `react-router-dom`, `react-icons`. 주요 기능: 반응형 디자인, Flexbox 기반 레이아웃, 시맨틱 마크업, 동적 UI 확장성.
-* **인증 시스템 연동:** `AuthContext`를 활용한 `UserNav` 및 `MyPage` 컴포넌트 구현. `useAuth` 훅을 사용해 로그인된 사용자의 정보를 안전하게 가져와 표시하고, `apiClient`를 사용해 백엔드 API와 안전하게 통신.
+* **인증 시스템 연동 (MyPage & UserNav):** `AuthContext`를 활용한 `UserNav` 및 `MyPage` 컴포넌트 구현. `useAuth` 훅을 사용해 로그인된 사용자의 정보를 안전하게 가져와 표시하고, `apiClient`를 사용해 백엔드 API와 안전하게 통신.
 
 ***
 
@@ -143,21 +144,21 @@
 #### 🛠️ 핵심 기능 구현 상세
 
 ##### 1. 안전한 사용자 인증 시스템 (Spring Security / JWT)
-* [cite_start]**구현 상세:** Spring Boot와 Spring Security 기반의 RESTful API에 대한 **안전한 인증 시스템** 구축[cite: 585]. [cite_start]**상태 비저장(Stateless) 세션 관리 모델**을 채택하여 확장성을 확보했으며, **JSON Web Token (JWT)**을 사용하여 사용자의 인증 상태를 안전하게 관리합니다[cite: 586].
+* **구현 상세:** Spring Boot와 Spring Security 기반의 RESTful API에 대한 **안전한 인증 시스템** 구축. **상태 비저장(Stateless) 세션 관리 모델**을 채택하여 확장성을 확보했으며, **JSON Web Token (JWT)**을 사용하여 사용자의 인증 상태를 안전하게 관리합니다.
 * **관련 화면:**
     | 로그인 화면 | 회원가입 화면 |
     | :---: | :---: |
     | ![AI Project Login Screen](images/3_screenshot_login.png) | ![AI Project Register Screen](images/3_screenshot_register.png) |
 
 ##### 2. 지도 기반 시뮬레이터 구현 (Google Maps API / React)
-* [cite_start]**구현 상세:** 백엔드 API를 통해 Google Maps API 키를 안전하게 가져와 지도를 동적으로 초기화합니다[cite: 587]. [cite_start]지도 클릭 시 마커를 표시하고, 해당 위치의 지표를 쿼리 패널에 반영하여 사용자 요청에 따른 데이터 시각화를 제공합니다[cite: 589].
+* **구현 상세:** 백엔드 API를 통해 Google Maps API 키를 안전하게 가져와 지도를 동적으로 초기화합니다. 지도 클릭 시 마커를 표시하고, 해당 위치의 지표를 쿼리 패널에 반영하여 사용자 요청에 따른 데이터 시각화를 제공합니다.
 * **관련 화면:**
     | 시뮬레이터 메인 화면 | 지도 뷰어 (위성 등) |
     | :---: | :---: |
     | ![AI Project Simulator Main](images/3_screenshot_main.png) | ![AI Project Map View](images/3_screenshot_map_view.png) |
 
 ##### 3. AI 모델 통합 및 데이터 관리 (Multi-Layer Communication)
-* [cite_start]**구현 상세:** **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**의 다층 통신 아키텍처를 구현했습니다[cite: 590]. [cite_start]Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot를 거쳐 MariaDB에 저장된 후, 최종적으로 React에 응답하여 화면을 업데이트하는 구조입니다[cite: 591].
+* **구현 상세:** **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**의 다층 통신 아키텍처를 구현했습니다. Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot를 거쳐 MariaDB에 저장된 후, 최종적으로 React에 응답하여 화면을 업데이트하는 구조입니다.
 * **관련 화면:**
     | 예측 쿼리 패널 및 결과 | 지진 발생 경보 모달 |
     | :---: | :---: |
