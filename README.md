@@ -66,7 +66,7 @@
 | **ERD (Entity Relationship Diagram)** | **홈페이지 및 상품 목록** |
 | ![WebShopping ERD](images/1_erd.png) | ![WebShopping Homepage]([WebShopping 홈페이지 스크린샷 주소를 여기에 붙여넣으세요]) |
 | **USECASE Diagram** | **상품 관리 (이미지 업로드/등록)** |
-| ![WebShopping Usecase](images/2erd.png) | ![WebShopping Image Management]([WebShopping 상품 등록/관리 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![WebShopping Usecase](images/1usecase.png) | ![WebShopping Image Management]([WebShopping 상품 등록/관리 스크린샷 주소를 여기에 붙여넣으세요]) |
 
 #### 주요 구현 기능 및 코드 설명
 1.  **이미지 업로드 및 관리:**
@@ -93,7 +93,7 @@
 | 다이어그램 | 스크린샷 |
 | :---: | :---: |
 | **ERD 및 유스케이스** | **메인 번역 화면** |
-| ![T.S.P ERD & Usecase]([T.S.P ERD 및 유스케이스 이미지 주소를 여기에 붙여넣으세요]) | ![T.S.P Main Translation]([T.S.P 메인 번역 화면 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![T.S.P ERD & Usecase](images/2erd, images/2usecase) | ![T.S.P Main Translation]([T.S.P 메인 번역 화면 스크린샷 주소를 여기에 붙여넣으세요]) |
 | **MyPage 컴포넌트** | **마이페이지** |
 | - | ![T.S.P MyPage]([T.S.P 마이페이지 스크린샷 주소를 여기에 붙여넣으세요]) |
 
@@ -108,7 +108,7 @@
 | 다이어그램 | 스크린샷 |
 | :---: | :---: |
 | **ERD 및 유스케이스** | **시뮬레이터 메인 화면** |
-| ![AI Project ERD & Usecase]([AI Project ERD 및 유스케이스 이미지 주소를 여기에 붙여넣으세요]) | ![AI Project Simulator Main]([AI Project 시뮬레이터 메인 화면 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![AI Project ERD & Usecase](images/3erd, images/3usecase) | ![AI Project Simulator Main]([AI Project 시뮬레이터 메인 화면 스크린샷 주소를 여기에 붙여넣으세요]) |
 | **로그인/회원가입** | **AI 예측 쿼리 패널** |
 | ![AI Project Login/Register]([AI Project 로그인/회원가입 스크린샷 주소를 여기에 붙여넣으세요]) | ![AI Project Prediction Panel]([AI Project 예측 쿼리 패널 스크린샷 주소를 여기에 붙여넣으세요]) |
 
