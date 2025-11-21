@@ -64,24 +64,24 @@
 | 다이어그램 | 스크린샷 |
 | :---: | :---: |
 | **ERD (Entity Relationship Diagram)** | **홈페이지 및 상품 목록** |
-| ![WebShopping ERD](images/1_erd.png) | ![WebShopping Homepage]([WebShopping 홈페이지 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![WebShopping ERD](images/1_erd.png) | ![WebShopping Homepage](images/1_screenshot_homepage.png) |
 | **USECASE Diagram** | **상품 관리 (이미지 업로드/등록)** |
-| ![WebShopping Usecase](images/1usecase.png) | ![WebShopping Image Management]([WebShopping 상품 등록/관리 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![WebShopping Usecase](images/1usecase.png) | ![WebShopping Image Management](images/1_screenshot_product.png) |
 
 #### 주요 구현 기능 및 코드 설명
-1.  **이미지 업로드 및 관리:**
-    * `@Value`를 이용한 업로드 경로 외부 설정 및 관리.
-    * `MultipartFile`을 이용한 파일 업로드 처리 및 `UUID`를 활용한 고유 파일명 생성.
-    * `file.transferTo()`를 이용한 파일 시스템 저장 및 JPA 엔티티를 통한 DB 연동.
-    * `FileSystem Resource` 및 `HttpHeaders`를 이용한 이미지 동적 서빙 (경로 탐색 공격 방지 포함).
-2.  **장바구니 기능 (수량 조절 및 알림):**
-    * **기능 시각화:** ![WebShopping Cart Alert/Management]([WebShopping 장바구니 관리 스크린샷 주소를 여기에 붙여넣으세요])
-    * `Fetch API`를 통해 `POST /api/cart`로 상품을 추가하고 `JavaScript alert()` 함수로 성공 알림 제공.
-    * `RESTful API`를 활용한 장바구니 항목 동적 관리 시스템 구축 (`PATCH /api/cart/{productID}`로 수량 증감, 재고 부족 시 백엔드 처리).
-3.  **상품 재고 관리 및 구매 제한 (품절 표시):**
-    * **기능 시각화:** ![WebShopping Sold Out]([WebShopping 품절 표시 스크린샷 주소를 여기에 붙여넣으세요])
-    * **백엔드:** `ProductDTO`의 `stock` 필드로 재고 정보 제공.
-    * **프론트엔드:** `product.stock <= 0` 조건으로 재고 확인 후 “품절” 텍스트 동적 추가 및 ‘장바구니 담기' 버튼 `disabled` 처리.
+1.  **이미지 업로드 및 관리:**
+    * `@Value`를 이용한 업로드 경로 외부 설정 및 관리.
+    * `MultipartFile`을 이용한 파일 업로드 처리 및 `UUID`를 활용한 고유 파일명 생성.
+    * `file.transferTo()`를 이용한 파일 시스템 저장 및 JPA 엔티티를 통한 DB 연동.
+    * `FileSystem Resource` 및 `HttpHeaders`를 이용한 이미지 동적 서빙 (경로 탐색 공격 방지 포함).
+2.  **장바구니 기능 (수량 조절 및 알림):**
+    * **기능 시각화:** ![WebShopping Cart Alert/Management](images/1_screenshot_cart.png)
+    * `Fetch API`를 통해 `POST /api/cart`로 상품을 추가하고 `JavaScript alert()` 함수로 성공 알림 제공.
+    * `RESTful API`를 활용한 장바구니 항목 동적 관리 시스템 구축 (`PATCH /api/cart/{productID}`로 수량 증감, 재고 부족 시 백엔드 처리).
+3.  **상품 재고 관리 및 구매 제한 (품절 표시):**
+    * **기능 시각화:** ![WebShopping Sold Out](images/1_screenshot_soldout.png)
+    * **백엔드:** `ProductDTO`의 `stock` 필드로 재고 정보 제공.
+    * **프론트엔드:** `product.stock <= 0` 조건으로 재고 확인 후 “품절” 텍스트 동적 추가 및 ‘장바구니 담기' 버튼 `disabled` 처리.
 
 ***
 
@@ -89,13 +89,30 @@
 
 * **핵심 기술력:** Google 번역 API 연동 및 Spring Security/JWT 활용 등 서비스 통합과 인증 시스템 구축 능력을 잘 보여줌.
 
-#### 📐 시스템 구조 및 화면
-| 다이어그램 | 스크린샷 |
+#### 📐 시스템 구조 및 다이어그램
+
+<div align="center">
+    <table>
+        <tr>
+            <td width="50%" align="center">
+                <img src="images/2erd.png" alt="T.S.P ERD 다이어그램" style="width: 100%; max-width: 400px;">
+                <br>
+                **[그림 2-1] T.S.P 프로젝트 ERD**
+            </td>
+            <td width="50%" align="center">
+                <img src="images/2usecase.png" alt="T.S.P Usecase 다이어그램" style="width: 100%; max-width: 400px;">
+                <br>
+                **[그림 2-2] T.S.P 프로젝트 Use Case**
+            </td>
+        </tr>
+    </table>
+</div>
+
+#### 🖥️ 주요 화면 스크린샷
+| 기능 | 스크린샷 |
 | :---: | :---: |
-| **ERD 및 유스케이스** | **메인 번역 화면** |
-| ![T.S.P ERD & Usecase](images/2erd, images/2usecase) | ![T.S.P Main Translation]([T.S.P 메인 번역 화면 스크린샷 주소를 여기에 붙여넣으세요]) |
-| **MyPage 컴포넌트** | **마이페이지** |
-| - | ![T.S.P MyPage]([T.S.P 마이페이지 스크린샷 주소를 여기에 붙여넣으세요]) |
+| **메인 번역 화면** | **마이페이지** |
+| ![T.S.P Main Translation](images/2_screenshot_main.png) | ![T.S.P MyPage](images/2_screenshot_mypage.png) |
 
 * **프론트엔드 (React):** 기술 스택: React, `react-router-dom`, `react-icons`. 주요 기능: 반응형 디자인, Flexbox 기반 레이아웃, 시맨틱 마크업, 동적 UI 확장성.
 * **인증 시스템 연동:** `AuthContext`를 활용한 `UserNav` 및 `MyPage` 컴포넌트 구현. `useAuth` 훅을 사용해 로그인된 사용자의 정보를 안전하게 가져와 표시하고, `apiClient`를 사용해 백엔드 API와 안전하게 통신.
@@ -104,16 +121,36 @@
 
 ### 3. AI 기반 실시간 쓰나미 예측 및 시뮬레이터
 
-#### 📐 시스템 구조 및 화면
-| 다이어그램 | 스크린샷 |
+#### 📐 시스템 구조 및 다이어그램
+
+<div align="center">
+    <table>
+        <tr>
+            <td width="50%" align="center">
+                <img src="images/3erd.png" alt="AI 쓰나미 예측 ERD" style="width: 100%; max-width: 400px;">
+                <br>
+                **[그림 3-1] AI 쓰나미 예측 시스템 ERD**
+            </td>
+            <td width="50%" align="center">
+                <img src="images/3usecase.png" alt="AI 쓰나미 예측 Use Case" style="width: 100%; max-width: 400px;">
+                <br>
+                **[그림 3-2] AI 쓰나미 예측 시스템 Use Case**
+            </td>
+        </tr>
+    </table>
+</div>
+
+#### 🖥️ 주요 화면 스크린샷
+| 기능 | 스크린샷 |
 | :---: | :---: |
-| **ERD 및 유스케이스** | **시뮬레이터 메인 화면** |
-| ![AI Project ERD & Usecase](images/3erd, images/3usecase) | ![AI Project Simulator Main]([AI Project 시뮬레이터 메인 화면 스크린샷 주소를 여기에 붙여넣으세요]) |
-| **로그인/회원가입** | **AI 예측 쿼리 패널** |
-| ![AI Project Login/Register]([AI Project 로그인/회원가입 스크린샷 주소를 여기에 붙여넣으세요]) | ![AI Project Prediction Panel]([AI Project 예측 쿼리 패널 스크린샷 주소를 여기에 붙여넣으세요]) |
+| **시뮬레이터 메인 화면** | **AI 예측 쿼리 패널** |
+| ![AI Project Simulator Main](images/3_screenshot_main.png) | ![AI Project Prediction Panel](images/3_screenshot_panel.png) |
+| **로그인/회원가입** | - |
+| ![AI Project Login/Register](images/3_screenshot_login.png) | - |
+
 
 * **백엔드 인증 시스템:** Spring Boot와 Spring Security 기반의 RESTful API에 대한 **안전한 인증 시스템** 구축. **상태 비저장(Stateless) 세션 관리 모델** 및 **JSON Web Token (JWT)**을 활용하여 확장성과 보안 확보.
 * **프론트엔드 (React / 데이터 시각화):** Vite 기반으로 React와 CSS를 사용하여 UI 구성. Axios를 통해 백엔드 API와 통신. **Google Maps JavaScript API** 키를 안전하게 가져와 지도를 동적으로 초기화하고, 사용자 요청에 따라 지도에 마커를 표시.
 * **통합 아키텍처 (Multi-Layer Communication):**
-    * 사용자 요청 흐름: **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**.
-    * Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot로 돌아오고, Spring Boot는 이 데이터를 MariaDB에 저장한 후 최종 결과를 React에 응답하여 화면 업데이트.
+    * 사용자 요청 흐름: **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**.
+    * Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot로 돌아오고, Spring Boot는 이 데이터를 MariaDB에 저장한 후 최종 결과를 React에 응답하여 화면 업데이트.
