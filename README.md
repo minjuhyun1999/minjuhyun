@@ -64,9 +64,9 @@
 | 다이어그램 | 스크린샷 |
 | :---: | :---: |
 | **ERD (Entity Relationship Diagram)** | **홈페이지 및 상품 목록** |
-| ![WebShopping ERD]([WebShopping ERD 이미지 주소를 여기에 붙여넣으세요]) | ![WebShopping Homepage]([WebShopping 홈페이지 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![WebShopping ERD](images/1_erd.png) | ![WebShopping Homepage]([WebShopping 홈페이지 스크린샷 주소를 여기에 붙여넣으세요]) |
 | **USECASE Diagram** | **상품 관리 (이미지 업로드/등록)** |
-| ![WebShopping Usecase]([WebShopping Usecase 이미지 주소를 여기에 붙여넣으세요]) | ![WebShopping Image Management]([WebShopping 상품 등록/관리 스크린샷 주소를 여기에 붙여넣으세요]) |
+| ![WebShopping Usecase](images/2erd.png) | ![WebShopping Image Management]([WebShopping 상품 등록/관리 스크린샷 주소를 여기에 붙여넣으세요]) |
 
 #### 주요 구현 기능 및 코드 설명
 1.  **이미지 업로드 및 관리:**
