@@ -78,8 +78,9 @@
     * **기능 시각화 (상품 추가 알림)**
     ![장바구니 알림 스크린샷](project1/상품추가알림.png)
     * **기능 시각화 (장바구니 동적 관리)**
-    ![장바구니 관리 화면](project1/상품추가알림.png)
+    ![장바구니 관리 화면](project1/장바구니수량.png)
     * `Fetch API`를 통해 `POST /api/cart`로 상품을 추가하고 `JavaScript alert()` 함수로 성공 알림 제공.
+    ![장바구니 관리 화면](project1/품절알림.png)
     * `RESTful API`를 활용한 장바구니 항목 동적 관리 시스템 구축 (`PATCH /api/cart/{productID}`로 수량 증감, 재고 부족 시 백엔드 처리).
 3.  **상품 재고 관리 및 구매 제한 (품절 표시):**
     * **기능 시각화 (품절 표시)**
@@ -104,16 +105,16 @@
 
 #### 🖥️ 주요 화면 및 컴포넌트
 * **메인 번역 화면**
-![T.S.P Main Translation](images/2_screenshot_main.png)
+![T.S.P Main Translation](project2/홈페이지.png)
 
 * **마이페이지**
-![T.S.P MyPage](images/2_screenshot_mypage.png)
+![T.S.P MyPage](project2/마이페이지.png)
 
 * **네비게이션 바 (로그인/로그아웃 상태)**
-![T.S.P UserNav Component](images/2_screenshot_usernav.png)
+![T.S.P UserNav Component](project2/네비게이션.png)
 
 * **상세 번역 결과**
-![T.S.P Detailed Result](images/2_screenshot_detail.png)
+![T.S.P Detailed Result](project2/다국어1.png)
 
 * **프론트엔드 (React):** 기술 스택: React, `react-router-dom`, `react-icons`. 주요 기능: 반응형 디자인, Flexbox 기반 레이아웃, 시맨틱 마크업, 동적 UI 확장성.
 * **인증 시스템 연동 (MyPage & UserNav):** `AuthContext`를 활용한 `UserNav` 및 `MyPage` 컴포넌트 구현. `useAuth` 훅을 사용해 로그인된 사용자의 정보를 안전하게 가져와 표시하고, `apiClient`를 사용해 백엔드 API와 안전하게 통신.
@@ -137,20 +138,20 @@
 ##### 1. 안전한 사용자 인증 시스템 (Spring Security / JWT)
 * **구현 상세:** Spring Boot와 Spring Security 기반의 RESTful API에 대한 **안전한 인증 시스템** 구축. **상태 비저장(Stateless) 세션 관리 모델**을 채택하여 확장성을 확보했으며, **JSON Web Token (JWT)**을 사용하여 사용자의 인증 상태를 안전하게 관리합니다.
 * **로그인 화면**
-![AI Project Login Screen](images/3_screenshot_login.png)
+![AI Project Login Screen](project3/로그인_화면.png)
 * **회원가입 화면**
-![AI Project Register Screen](images/3_screenshot_register.png)
+![AI Project Register Screen](project3/회원가입_화면.png)
 
 ##### 2. 지도 기반 시뮬레이터 구현 (Google Maps API / React)
 * **구현 상세:** 백엔드 API를 통해 Google Maps API 키를 안전하게 가져와 지도를 동적으로 초기화합니다. 지도 클릭 시 마커를 표시하고, 해당 위치의 지표를 쿼리 패널에 반영하여 사용자 요청에 따른 데이터 시각화를 제공합니다.
 * **시뮬레이터 메인 화면**
-![AI Project Simulator Main](images/3_screenshot_main.png)
+![AI Project Simulator Main](project3/프로젝트_3_홈페이지.png)
 * **지도 뷰어 (위성 등)**
-![AI Project Map View](images/3_screenshot_map_view.png)
+![AI Project Map View](project3/구글_지도_api_지도위성사진.png)
 
 ##### 3. AI 모델 통합 및 데이터 관리 (Multi-Layer Communication)
 * **구현 상세:** **React (UI) → Spring Boot (중개/데이터 처리) → Flask (AI 연산) → MariaDB (저장)**의 다층 통신 아키텍처를 구현했습니다. Flask에서 AI 모델 추론이 완료되면 결과는 Spring Boot를 거쳐 MariaDB에 저장된 후, 최종적으로 React에 응답하여 화면을 업데이트하는 구조입니다.
 * **예측 쿼리 패널 및 결과**
-![AI Project Query Panel](images/3_screenshot_query_panel.png)
+![AI Project Query Panel](project3/예측.png)
 * **지진 발생 경보 모달**
-![AI Project Earthquake Modal](images/3_screenshot_modal.png)
+![AI Project Earthquake Modal](project3/경보.png)
